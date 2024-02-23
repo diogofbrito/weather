@@ -1,0 +1,133 @@
+body {
+	background-color: #383a47;
+	color: #383a47;
+}
+
+.app {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	padding: 5%;
+	background-color: aliceblue;
+	margin: 5%;
+	border-radius: 15px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 5px;
+}
+
+.search {
+	display: flex;
+	position: relative;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+input {
+	width: 50%;
+	padding: 10px;
+	outline: none;
+	border: 1px solid cadetblue;
+	border-radius: 10px;
+}
+
+.cities-list {
+	position: absolute;
+	top: 40px;
+	width: 45%;
+	margin-top: 10px;
+	border: 1px solid cadetblue;
+	background-color: ghostwhite;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+button {
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	background-color: cadetblue;
+	color: ghostwhite;
+	font-size: 16px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.forecast-title {
+	align-self: center;
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+
+.forecast {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.day {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	flex: 1;
+	border-right: 1px solid cadetblue;
+	margin-bottom: 30px;
+}
+
+.day:last-child {
+	border-right: 0;
+}
+
+.day img {
+	width: 100px;
+	height: 100px;
+	margin: 20px 0;
+}
+
+.day p:nth-child(1) {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+	input {
+		width: 80%;
+		padding: 10px;
+		outline: none;
+		border: 1px solid cadetblue;
+		border-radius: 10px;
+	}
+
+	.cities-list {
+		position: absolute;
+		top: 40px;
+		width: 70%;
+		margin-top: 10px;
+		border: 1px solid cadetblue;
+		background-color: ghostwhite;
+		padding: 20px;
+		border-radius: 10px;
+	}
+
+	.forecast {
+		flex-flow: column nowrap;
+	}
+
+	.day {
+		border-right: 0;
+		border-bottom: 1px solid cadetblue;
+		padding-bottom: 30px;
+	}
+
+	.day:last-child {
+		border-bottom: 0;
+	}
+}
